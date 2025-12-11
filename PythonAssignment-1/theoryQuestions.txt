@@ -1,0 +1,26 @@
+1.	What is a variable in Python? Explain in simple words.
+Answer: Variables are container for storing data values.
+
+2.	What are the main data types in Python? Name at least four.
+Answer: int , float , String , Boolean.
+
+3.	What is the difference between an integer and a float?
+Answer: * An integer (int) is a number without a decimal point.
+        Integer consists of both positive and negative numbers. Ex: 1, -15, 0, 15, 20
+        * A float is a floating-point number, which means it is a number that has a decimal place.
+        Floating-point numbers can also be both positive and negative.
+        Ex: 3.14 , 0.0 , -9.45, 4.5
+
+4.	What is a string? Give two examples.
+Answer: A string is a sequence of characters enclosed in single or double quotes.
+        Ex: firstName = "Mamta", lastName = 'Sonar'
+
+5.	What is a boolean data type used for?
+Answer: The Boolean data type represents logical values : True or False
+        Booleans are essential in controlling program flow, especially in decision-making and
+        conditional statements.
+        ex: goodInBadminton = False , loveTravelling = True
+            print(type(goodInBadminton))
+            Output: <class 'bool'>
+
+
