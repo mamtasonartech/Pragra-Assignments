@@ -23,6 +23,7 @@ print(str1.split()[0])
 #6. Create a string and print its first and last character.
 str2= "Sonar"
 print(str2[0])
+#or
 print (str2[4])
 
 #7. Check whether the word "Python" exists in the string "I am learning Python".
