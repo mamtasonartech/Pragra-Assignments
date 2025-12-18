@@ -33,8 +33,19 @@ print(add_float)
 # Dictionaries
 
 #6. Create a dictionary with keys: name, age, and city, and print it.
+my_info = dict(name = 'Mamta' , age = 35 , city = 'Orillia')
+print(my_info)
 
 #7. Access and print the value of the key age from a dictionary.
+print(my_info.get('age'))
+
 #8. Add a new key country to an existing dictionary.
+my_info.update({'country': 'Canada'})
+print(my_info)
+
 #9. Update the value of an existing key in a dictionary.
+my_info.update({'name': 'Mamta Sonar'})
+print(my_info)
+
 #10. Print all the keys of a dictionary.
+print(my_info.keys())
