@@ -16,10 +16,13 @@ while  number1<20:
 # 3. Create a list of 5 fruits and print each fruit using a while loop.
 
 fruits = ['apple','banana','orange','strawberry','mango']
-num = 0
-while num < len(fruits) :
-    print(fruits[num])
-    num += 1
+if not fruits:
+    print("The list is empty")
+else:
+    num = 0
+    while num < len(fruits) :
+        print(fruits[num])
+        num += 1
 
 # 4. Write a program to print the length of a list.
 
@@ -29,6 +32,11 @@ print(list_length)
 # 5. Write a program to print all elements of a list using index-based access.
 
 colors = ['red','green','blue','yellow','purple','orange']
+if not colors:
+    print("The list is empty")
+else:
+    for col in range(len(colors)):
+        print(colors[col])
 
 # 6. Use a while loop to print numbers from 10 to 1.
 
@@ -47,4 +55,7 @@ for number4 in range(1,6):
 #8. Given a list of integers, print only the first element of the list.
 
 int_list = [1,2,3,4,5]
-print(int_list[0])
+if not int_list:
+    print("The list is empty")
+else:
+    print(int_list[0])
