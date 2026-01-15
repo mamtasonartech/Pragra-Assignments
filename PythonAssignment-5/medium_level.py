@@ -39,3 +39,78 @@ else:
         if num1 > 50:
             break
         print(num1)
+
+#21. Write a program to reverse a list using a while loop.
+
+number_reverse = [1, 2, 3, 4, 5]
+
+if not number_reverse:
+    print("The list is empty")
+else:
+    reversed_list = []
+    i = len(number_reverse) - 1
+    while i >= 0:
+        reversed_list.append(number_reverse[i])
+        i -= 1
+
+    print(reversed_list)
+
+# 22. Write a program to find the second largest number in a list.
+
+second_largest = [21, 23, 45, 99, 47, 28]
+if not second_largest:
+    print("The list is empty")
+elif len(second_largest) < 2:
+    print("Second largest does not exist")
+else:
+    second_largest.sort(reverse=True)
+    print(second_largest[1])
+
+# 23. Write a program to print duplicate elements from a list.
+
+find_duplicate = [1, 2, 3, 4, 5, 2 , 6, 4]
+if not find_duplicate:
+    print("The list is empty")
+else:
+    duplicates = [i for i in set(find_duplicate) if find_duplicate.count(i) > 1]
+    if duplicates:
+        print("Duplicate elements:", duplicates)
+    else:
+        print("No duplicates found")
+
+
+# 24. Write a program that takes user input repeatedly and stores values in a list until the user enters -1.
+
+# myList = []
+# user_input = int(input("Enter the number of elements: "))
+# for i in range(user_input):
+#     element = input(f"Enter element {i+1}: ")
+#     myList.append(element)
+#
+# print("List:", myList) #not sure how to ADD -1 condition
+
+
+numbers_list = []
+while True:
+    num = int(input("Enter a number: "))
+    if num == -1:
+        break
+    numbers_list.append(num)
+
+print("You entered:", numbers_list)
+
+# 25. Write a program to check whether a list is sorted in ascending order or not.
+
+check_ascending = [1,2,3,4]
+
+if not check_ascending:
+    print("The list is empty")
+elif len(check_ascending) < 2:
+        print("list has one element")
+else:
+    result = True
+    for i in range(len(check_ascending) - 1):
+        if check_ascending[i] > check_ascending[i + 1]:
+            result = False
+            break
+    print(result)
