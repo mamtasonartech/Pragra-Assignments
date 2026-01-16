@@ -11,6 +11,7 @@
       <li>Assignment 2 - String and String Methods , Operators</li>
       <li>Assignment 3 - Type Casting , Dictionary</li>
       <li>Assignment 4 - Conditional Statments- if , elif, else</li>
+      <li>Assignment 5 - while loop , list</li>
     </ul>
 </body>
 </html>
