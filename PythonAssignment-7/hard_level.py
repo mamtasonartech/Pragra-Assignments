@@ -10,16 +10,11 @@ class BankAccount:
     def __init__(self,balance = 0):
         self.balance = balance
 # Define a deposit method:
-#   - It should accept an amount
-#   - Add the amount to the balance
+
     def deposit(self,amount):
         self.balance += amount
 
 # Define a withdraw method:
-#   - It should accept an amount
-#   - First check if balance is sufficient
-#   - If yes, subtract amount from balance
-#   - If no, print "Insufficient balance"
     def withdraw(self,amount):
         if  amount <= self.balance:
             print("Balance is sufficient")
@@ -52,8 +47,6 @@ class Student:
         self.marks = []
 
 # Define add_marks(marks_list) method:
-#   - It should accept a list of marks
-#   - Add these marks to the student's marks list
     def add_marks(self,marks_list):
         if not isinstance(marks_list, list):
             print("Please provide a list of marks")
@@ -65,9 +58,6 @@ class Student:
             self.marks.append(marks_list)
 
 # Define calculate_average() method:
-#   - It should calculate the average of all marks
-#   - Return the average value
-#   - If there are no marks, return 0 or show a message
     def calculate_average(self):
        if len(self.marks)==0:
            return 0
@@ -75,9 +65,7 @@ class Student:
            return sum(self.marks) / len(self.marks)
 
 # Define is_pass() method:
-#   - It should call calculate_average() to get the average
-#   - If average is greater than or equal to 40, return True or print "Pass"
-#   - Otherwise return False or print "Fail"
+
     def is_pass(self):
         average = self.calculate_average()
         if  average >= 40:
@@ -102,16 +90,10 @@ Store credentials inside the object. """
 class LoginSystem:
 
 # Initialize the class with a data structure (like a dictionary)
-# This will store usernames and passwords inside the object
     def __init__(self):
         self.credentials = {}
 
 # Define register(username, password) method
-#   - Check if username or password is empty
-#   - Check if the username already exists
-#   - If valid, store username and password in the object
-#   - Show a success or error message
-
     def register(self, username, password):
         if username == "" or password == "":
             print("Username and password cannot be empty")
@@ -123,12 +105,6 @@ class LoginSystem:
         print("Registration successful")
 
 # Define login(username, password) method
-#   - Check if the username exists in stored credentials
-#   - If not found, show "User not found"
-#   - If found, compare the stored password with the given password
-#   - If password matches, show "Login successful"
-#   - Otherwise, show "Incorrect password"
-
     def login(self, username, password):
         if username not in self.credentials:
             print("User not found")
@@ -151,47 +127,43 @@ print("-------------------------------------------------------------------------
 ● status() 
 Track availability using an instance variable."""
 
-
 # Create a class named LibraryBook
 class LibraryBook:
-# Initialize an instance variable to track availability of the book
-# Set it to True when the book is available
-    def __init__(self):
-        self.available = True
+    def __init__(self,title):
+        self.data = {
+            "title": title,
+            "available": True
+        }
+
 # Define borrow() method
-#   - Check if the book is available
-#   - If available, mark it as borrowed
-#   - If not available, show a message that the book is already borrowed
     def borrow(self):
-        if self.available:
-            self.available = False
+        if self.data["available"]== True:
+            self.data["available"] = False
             print("Book borrowed successfully")
         else:
-            # If already borrowed
             print("Book is already borrowed")
 # Define return_book() method
-#   - Check if the book is currently borrowed
-#   - If borrowed, mark it as available again
-#   - If not borrowed, show a message that the book was not borrowed
     def return_book(self):
-        if not self.available:
-            self.available = True
+        if self.data["available"]== False:
+            self.data["available"] = True
             print("Book returned successfully")
         else:
             print("Book was not borrowed")
 # Define status() method
-#   - Check the availability variable
-#   - If available, show "Book is available"
-#   - Otherwise, show "Book is currently borrowed"
+
     def status(self):
-        if self.available:
-            print("Book is available")
+        if self.data["available"] == True:
+            availability = "Book is Available"
         else:
-            print("Book is currently borrowed")
-book1 = LibraryBook()
+            availability = "Checked Out"
+        print(f"The Status is: {availability}")
+
+
+book1 = LibraryBook("Python")
 book1.status()
 book1.borrow()
 book1.status()
+book1.borrow()
 book1.return_book()
 book1.status()
 
